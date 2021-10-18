@@ -1,0 +1,426 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;        
+}
+a{
+  color: #f3f3f3;
+  text-decoration: none;
+}
+header{
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    background-color: rgba(5,33,51,0.98);
+    z-index: 30;
+}
+
+#check{
+    display: none;
+}
+
+#check:checked ~ .menu{
+    left: 0px;
+    width: 400px;
+}
+
+.menu{
+    position: fixed;
+    top: 100px;
+    right: 1050px;
+    height: 100%;
+    background: #2D3E50;
+    transition: all 500ms cubic-bezier(1,0,0,1);
+    transition-timing-function: cubic-bezier(1,0,0,1);
+    overflow: hidden;
+    z-index: 9;
+}
+.menu li{
+    list-style: none;
+    padding: 16px;
+    color: white;
+    cursor: pointer;
+    transition: all 300ms;
+    display: block;
+    width: 400px;
+}
+
+.menu li:hover{
+    background: rgba(0,0,0,0.2);
+}
+
+
+.content-all label{
+    position: fixed;
+    top: 30px;
+    font-size: 26px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    z-index: 10;
+}
+
+.content-all h1{
+  list-style: none;
+    position: fixed;
+    width: 100%;
+    max-width: 850px;
+    top: 35px;
+    font-size: 20px;
+    text-align: right;
+    color: white;
+}
+
+.content-all h2{
+  list-style: none;
+  position: fixed;
+  width: 100%;
+  max-width: 1000px;
+  top: 35px;
+  font-size: 20px;
+  text-align: right;
+  color: white;
+}
+
+/*.................*/
+
+.logo{
+    width: 190px;
+    left: 50PX;
+    height: 80%;
+    position: relative;
+    top: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+  }
+  .logo img{
+    border-radius: 200px;
+    width: 150px;
+  }
+
+  /*.................*/
+  /*Buscador de contenido el boton */
+#ctn-icon-search{
+    position: absolute;
+    top: 0px;
+    right: 300px;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #ctn-icon-search i{
+    font-size: 18px;
+    color: #777777;
+    cursor: pointer;
+    transition: all 300ms;
+  }
+  
+  #ctn-icon-search i:hover{
+    color: #46a2fd;
+  }
+    
+  #ctn-bars-search {
+    position: fixed;
+    top: -50px;  
+    margin: 70px 20px;
+    z-index: 9;
+    transition: all 600ms;
+}
+  
+  #ctn-bars-search input{ 
+    display: block;
+    width: 390%;
+    padding: 10px;
+    font-size: 18px;
+    outline: 0;
+  }
+  /*donde se escribe*/
+  #box-search{
+    position: fixed;
+    top: 78px; 
+    transform: translateX(0%);
+    margin: 70px 20px;
+    width: 970px;
+    background:#f3f3f3; ;
+    z-index: 9;
+    overflow: hidden;
+    display: none;
+  }
+  #box-search li a{
+    display: block;
+    width: 1200px;
+    color: #777777;
+    padding: 12px 20px;
+  }
+  #box-search li a:hover{
+    background: #dfdddd;
+  }
+  #box-search li a i{
+    margin-right: 10px;
+    color: #777777;
+  }
+  #cover-ctn-search{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 7;
+    display: none;
+  }
+
+  /*--------------------------------------*/
+/*contenedor*/
+.contenedor1{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 70px;
+    background-image: url(../img/image-three.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat:no-repeat;
+}
+.contenedor1:before{
+    content:'';
+    width: 100%;
+    height: 100%;
+    background-color:#46a2fd; 
+    position: absolute;  
+    top: 0;
+    left: 0;
+}
+.contenedor2{
+    max-width: 800px;
+    height: 500px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+.contenedor2 h1{
+    font-size: 60px;
+    font-weight: 500;
+    color: blanchedalmond;
+    margin-bottom: 20px;
+}
+.contenedor2 p{
+    font-size: 20px;
+    font-weight: 300;
+    color: blanchedalmond;
+}
+
+/*-----------------------------------------------*/
+/* News Cards */
+.news-cards {
+    margin: 70px 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+  }
+  
+  .news-cards img {
+    width: 100%;
+    height: 180px;
+  }
+  
+  .news-cards h3 {
+    font-size: 20px;
+    margin: 10px 0;
+    color: black; 
+  }
+  
+  .news-cards a {
+    padding: 10px 0;
+   text-decoration: none;
+    border-radius: 10px;
+    background-color: rgb(218, 175, 35);
+    color: black;
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: bold;
+  }
+  .news-cards p{
+    color: black;
+  }
+  
+  /* CARDS BANNER ONE */
+  .cards-banner-one {
+    width: 100%;
+    height: 350px;
+    background: url("./img/tech-red.jpg");
+    margin-bottom: 40px;
+  }
+  
+  .cards-banner-one .content {
+    width: 40%;
+    padding: 90px 0 0 30px;
+    color: #fff;
+  }
+  
+  .cards-banner-one p,
+  .cards-banner-two p {
+    margin: 10px 0 20px 0;
+  }
+  
+  /* CARDS BANNER TWO*/
+  .cards-banner-two {
+    width: 100%;
+    height: 350px;
+    background: url("./img/image-five.jpg") no-repeat center center/cover;
+  }
+  
+  .cards-banner-two .content {
+    width: 50%;
+    padding: 100px 0 0 30px;
+    color: #fff;
+  }
+  
+  /* Follow */
+  .social {
+    margin: 50px;
+    
+  }
+  .social p {
+      color: rgb(14, 4, 71);
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  .links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .links a {
+    color: rgb(7, 10, 177);
+    margin: 0 30px;
+  }
+  
+  .links a i {
+    font-size: 3rem;
+  }
+  
+  /* Links */
+  .footer-links {
+    background-color: rgba(5,33,51,0.98);
+    color: #616161;
+    font-size: 12px;
+    padding: 35px 0;
+  }
+  
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  
+  .footer-container ul {
+    margin: 0 auto;
+  }
+  
+  .footer-links li {
+    line-height: 2.8;
+  }
+  
+  .footer {
+    background-color: rgba(5,33,51,0.98);
+    color: #616161;
+    font-size: 12px;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 1rem;
+    padding-bottom: 20px;
+  }
+
+  
+
+/* Responsive Design - adaptable a dispositivos moviles*/
+
+
+@media screen and (max-width: 800px){
+  *{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+
+#check{
+  display: none;
+}
+
+#check:checked ~ .menu{
+  width: 50%;
+}
+
+#ctn-bars-search input{ 
+  width: 100%;
+}
+
+#ctn-icon-search{
+
+  right: 50px;
+  height:100%;
+}
+
+.content-all h1{
+  top: 65px;
+    max-width: 230px; 
+}
+
+.content-all h2{
+  right: 10px;
+  top: 65px;
+  
+}
+
+
+
+
+
+
+
+  .news-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cards-banner-one .content,
+  .cards-banner-two .content {
+    width: 80%;
+  }
+
+  .footer-links .footer-container {
+   grid-template-columns: repeat(2, 2fr);
+  
+  }
+  .news-cards {
+    grid-template-columns: 2fr;
+  }
+
+  .cards-banner-one .content,
+  .cards-banner-two .content {
+    width: 100%;
+  padding: 10px 0px;
+
+  }
+  .footer-links .footer-container {
+    grid-template-columns: 2fr;
+  }
+
+  .footer-links .footer-container ul {
+    text-align: center;
+  }
+ } 
